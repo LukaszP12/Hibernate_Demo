@@ -1,3 +1,5 @@
+package pl.strefakursu.hibernatedemo.entity;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -55,7 +57,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "pl.strefakursu.hibernatedemo.Employee{" +
                 "idEmployee=" + idEmployee +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
