@@ -1,15 +1,30 @@
 package pl.strefakursu.hibernatedemo.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity // określa, że dana klasa jest encja
 @Table(name="employee")
 public class Employee {
 
+    /*GenerationType.Auto - automatyczne określenie sposobu generowania
+    * Sposób określany w oparciu o zastosowany dialekt SQL
+    * Domyślna wartość
+    *  */
+
+    /*GenerationType.Identity - baza danych sama określa i
+     * przypisuje klucz podstawowy
+     * autoikrementowana kolumna klucza głównego
+     *  */
+    /*GenerationType.Sequence - baza danych generuje klucze
+    w oparciu o sekwencje (sekwencja wywoływana przed każdą instrukcją insert)
+     *  */
+    /*GenerationType.Table - hibernate korzysta z dodatkowej tabeli w schemacie
+    baz danych
+     *  */
+    // SequenceGenerator - można stworzyć własną strategie
+
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id_employee")
     private Integer idEmployee;
 
