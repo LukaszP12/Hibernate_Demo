@@ -81,3 +81,8 @@ public class Employee {
     }
 
 }
+
+
+// Hibernate Query Language
+// W pełni zorientowany obiektowo
+// podobny do SQL
